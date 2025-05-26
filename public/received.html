@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Received SMS Inbox - Vishnu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-bg">
+    <div class="app-container">
+      <header class="app-header">
+        <div class="header-row">
+          <div>
+            <h1>📥 SMS Inbox</h1>
+            <span class="subhead">View only received messages</span>
+          </div>
+          <nav>
+            <a href="index.html" class="nav-link">Back to Chat</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="chat-window" id="chat-window">
+          <div id="messages" class="messages"></div>
+          <div class="loader" id="loader" style="display:none;"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="received.js"></script>
+</body>
+</html>
