@@ -5,24 +5,36 @@
   <title>SMS Chat - Vishnu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for modern look -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="app-container">
-    <header>
-      <h1>📱 SMS Chat</h1>
-      <span class="subhead">Powered by Twilio • by Vishnu</span>
-    </header>
-    <div class="chat-window" id="chat-window">
-      <div id="messages" class="messages"></div>
-      <div class="loader" id="loader" style="display:none;"></div>
+  <div class="app-bg">
+    <div class="app-container">
+      <header class="app-header">
+        <div class="header-row">
+          <div>
+            <h1>📱 SMS Chat</h1>
+            <span class="subhead">Powered by Twilio • by Vishnu</span>
+          </div>
+          <nav>
+            <a href="received.html" class="nav-link">Inbox</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="chat-window" id="chat-window">
+          <div id="messages" class="messages"></div>
+          <div class="loader" id="loader" style="display:none;"></div>
+        </div>
+        <form id="smsForm" class="sms-form">
+          <input type="text" id="to" placeholder="Recipient (+91...)" required autocomplete="off">
+          <textarea id="body" placeholder="Type your message..." required></textarea>
+          <button type="submit" id="sendBtn">Send</button>
+        </form>
+        <div id="status"></div>
+      </main>
     </div>
-    <form id="smsForm" class="sms-form">
-      <input type="text" id="to" placeholder="Recipient (+91...)" required>
-      <textarea id="body" placeholder="Type your message..." required></textarea>
-      <button type="submit" id="sendBtn">Send</button>
-    </form>
-    <div id="status"></div>
   </div>
   <script src="app.js"></script>
 </body>
